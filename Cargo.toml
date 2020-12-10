@@ -20,7 +20,7 @@ doc = false
 [dependencies]
 # When elasticsearch upgrades to use a version of reqwest that supports tokio 0.3, use `rt-multi-threaded`
 tokio = { version = "0.2", features = ["fs", "macros", "rt-threaded"] }
-jheap_histo = { path = "jheap_histo" }
+jheap_histo = { path = "jheap_histo", version = "0.1.0" }
 structopt = "0.3"
 anyhow = "1.0"
 elasticsearch = "7.10.0-alpha.1"

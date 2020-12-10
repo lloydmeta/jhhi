@@ -6,7 +6,7 @@ Java Heap Histogram Ingest
 
 ## Install
 
-Either 
+`cargo install jhhi` or download from [releases page](https://github.com/lloydmeta/jhhi/releases).
 
 ### Usage
 

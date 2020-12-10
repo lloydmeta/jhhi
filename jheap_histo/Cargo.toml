@@ -3,6 +3,10 @@ name = "jheap_histo"
 version = "0.1.0"
 authors = ["lloydmeta <lloydmeta@gmail.com>"]
 edition = "2018"
+description = "Ingests Java heap histograms to Elasticsearch"
+license = "MIT"
+keywords = ["Java", "heap", "histogram"]
+repository = "https://github.com/lloydmeta/jhhi"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
