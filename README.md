@@ -1,8 +1,18 @@
-## jhhi
+## jhhi [![Continuous integration](https://github.com/lloydmeta/jhhi/workflows/Continuous%20integration/badge.svg)](https://github.com/lloydmeta/jhhi/actions?query=workflow%3A%22Continuous+integration%22)
 
 Java Heap Histogram Ingest
 
 ![Kibana](kibana.png)
+
+- Send a single histogram or all histograms in a directory
+  - Attempts to parse a timestamp in the following order per file
+    1. RFC3339 parse of file name
+    2. File created at timestamp
+    3. File modified at timestamp
+- Supports URL or Cloud ID
+- Supports different auths (Basic, Api Key)
+- Uses the [Bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
+- Uses the [official Elasticsearch client](https://github.com/elastic/elasticsearch-rs)
 
 ## Install
 
