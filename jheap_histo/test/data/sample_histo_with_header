@@ -1,0 +1,43 @@
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:        241596       31955224  [C
+   2:        227642        5463408  java.lang.String
+   3:         37572        4020400  java.lang.Class
+   4:         70340        4011568  [Ljava.lang.Object;
+   5:         25505        3663408  [B
+   6:           110        3606240  [Lakka.dispatch.forkjoin.ForkJoinTask;
+   7:         51061        2859416  com.fasterxml.jackson.databind.type.CollectionLikeType
+   8:         87685        2805920  java.util.concurrent.ConcurrentHashMap$Node
+   9:         68874        2754960  java.util.LinkedHashMap$Entry
+  10:         22017        1937496  java.lang.reflect.Method
+  11:         21189        1813496  [Ljava.util.HashMap$Node;
+  12:         32125        1799000  java.util.LinkedHashMap
+  13:         57311        1432072  [Lcom.fasterxml.jackson.databind.JavaType;
+  14:          7999        1290520  [Ljava.util.concurrent.ConcurrentHashMap$Node;
+  15:          4896        1289392  [Z
+  16:         51025        1224600  java.util.ArrayList
+  17:         14345        1195200  [I
+  18:         10866        1130064  scala.reflect.runtime.SynchronizedSymbols$SynchronizedSymbol$$anon$12
+  19:         31441        1006112  com.fasterxml.jackson.databind.type.TypeBindings
+  20:         33403         919872  [Ljava.lang.String;
+  21:         15974         894544  java.lang.invoke.MemberName
+  22:         40566         883448  [Ljava.lang.Class;
+  23:         31408         753792  scala.collection.immutable.$colon$colon
+  24:         23469         751008  scala.reflect.internal.Symbols$TypeHistory
+  25:         44309         708944  java.lang.Object
+  26:         29322         703728  java.util.regex.Pattern$5
+  27:         21379         684128  java.util.HashMap$Node
+  28:         13950         669600  com.fasterxml.jackson.databind.type.SimpleType
+  29:         25371         608904  java.util.regex.Pattern$1
+  30:         18884         604288  scala.reflect.internal.pickling.UnPickler$Scan$LazyTypeRef
+  31:          6804         598752  scala.reflect.runtime.SynchronizedSymbols$SynchronizedSymbol$$anon$14
+  32:         17122         547904  java.lang.invoke.DirectMethodHandle
+  33:          7047         507384  java.util.regex.Pattern
+  34:         15353         491296  scala.reflect.internal.Scopes$ScopeEntry
+  35:         11363         454520  com.fasterxml.jackson.databind.introspect.AnnotatedMethod
+  36:          8869         425712  java.util.HashMap
+  37:         12771         408672  java.util.regex.Pattern$Curly
+  38:         10075         403000  com.typesafe.config.impl.SimpleConfigOrigin
+  39:          9969         398760  java.lang.invoke.MethodType
+  40:         16614         398736  java.util.concurrent.atomic.AtomicLong
+Total       2257657      113525560

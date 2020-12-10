@@ -1,0 +1,20 @@
+[package]
+name = "jheap_histo"
+version = "0.1.0"
+authors = ["lloydmeta <lloydmeta@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+
+[dependencies]
+combine = "4.4"
+chrono = "0.4"
+tokio = { version = "0.2", features = ["fs"] }
+thiserror = "1.0"
+log = "0.4"
+
+[dev-dependencies]
+# When elasticsearch upgrades to use a version of reqwest that supports tokio 0.3, use `rt-multi-threaded`
+tokio = { version = "0.2", features = ["macros", "rt-threaded"] }
