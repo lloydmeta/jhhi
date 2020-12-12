@@ -40,7 +40,7 @@ jobs:
         run: strip target/${{ matrix.target }}/release/jhhi
 
       - name: Tar the binary (nix)
-        if: !contains(matrix.os, 'windows')
+        if: "!contains(matrix.os, 'windows')"
         run: tar -czvf jhhi-${{ matrix.target }}.tar.gz target/${{ matrix.target }}/release/jhhi
 
       - name: Tar the binary (windows)
