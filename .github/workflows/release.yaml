@@ -1,12 +1,12 @@
 # Taken from https://raw.githubusercontent.com/zackify/flydb/master/.github/workflows/build-binary.yml
 
-name: Build Binaries
+name: Build Binaries, maybe release
 on:
   push:
 
 jobs:
   build:
-    name: Build and maybe release [${{ matrix.os }} ${{ matrix.target }}]
+    name: [${{ matrix.os }} ${{ matrix.target }}]
     strategy:
       fail-fast: false
       matrix:
