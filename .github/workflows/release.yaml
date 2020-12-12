@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build and maybe release [${{ matrix.os } ${{ matrix.target }}]
+    name: Build and maybe release [${{ matrix.os }} ${{ matrix.target }}]
     fail-fast: false
     strategy:
       matrix:
