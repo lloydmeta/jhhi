@@ -40,6 +40,8 @@ jobs:
         with:
           command: build
           args: --release --target x86_64-unknown-linux-musl
+      - name: show binary
+        run: ls target/release
       - name: Rename binary
         run: mv target/release/jhhi jhhi-linux-amd64
       - name: Upload to release
