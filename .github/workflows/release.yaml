@@ -2,9 +2,7 @@
 
 name: Build Binaries
 on:
-  release:
-    types: # This configuration does not affect the page_build event above
-      - created
+  push:
 jobs:
   build_for_mac:
     name: MacOS
@@ -18,33 +16,36 @@ jobs:
       - name: Rename binary
         run: mv target/release/jhhi jhhi-macos64
       - name: Upload to release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl \
-            -f \
-            -sSL \
-            -XPOST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Content-Length: $(stat -f%z jhhi-macos64)" \
-            -H "Content-Type: application/octet-stream" \
-            --upload-file "jhhi-macos64" \
-            "https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$(jq --raw-output '.release.id' $GITHUB_EVENT_PATH)/assets?name=jhhi-macos64"
+        with:
+          files: target/release/jhhi-macos64
 
   build_for_linux:
     name: Linux
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
+      - uses: actions-rs/toolchain@v1
+          with:
+            toolchain: stable
+            target: x86_64-unknown-linux-musl
+            override: true
       - uses: actions-rs/cargo@v1
         with:
+          use-cross: true
+          target: x86_64-unknown-linux-musl
           command: build
           args: --release
       - name: Rename binary
         run: mv target/release/jhhi jhhi-linux-amd64
       - name: Upload to release
-        uses: JasonEtco/upload-to-release@d648f1babf776de9cad881320bd9e9818fc3b262
-        with:
-          args: jhhi-linux-amd64 application/octet-stream
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: target/release/jhhi-linux-amd64
+
