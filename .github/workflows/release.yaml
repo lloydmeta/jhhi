@@ -37,6 +37,7 @@ jobs:
           args: --release --target ${{ matrix.target }}
 
       - name: Strip the binary
+        if: "!contains(matrix.os, 'windows')"
         run: strip target/${{ matrix.target }}/release/jhhi
 
       - name: Tar the binary (nix)
