@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: [${{ matrix.os }} ${{ matrix.target }}]
+    name: For [${{ matrix.os }} ${{ matrix.target }}]
     strategy:
       fail-fast: false
       matrix:
